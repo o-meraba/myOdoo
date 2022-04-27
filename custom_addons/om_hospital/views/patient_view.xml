@@ -14,6 +14,7 @@
                     <filter name="filter_female" string="Female" domain="[('gender','=','female')]"/>
                     <separator/>
                     <filter name="filter_kids" string="Kids" domain="[('age', '&lt;=','5')]"/>    <!-- &lt;= equals <= -->
+                    <filter name="filter_archived" string="Archived" domain="[('active', '=', False)]"/>
                     <group expand="0" string="Group By">
                         <filter string="Gender" name="group_by_gender" domain="[]" context="{'group_by': 'gender'}"/>
                         <filter string="Age" name="group_by_age" domain="[]" context="{'group_by': 'age'}"/>
@@ -51,7 +52,8 @@
                         </group>
                         <group>
                             <field name="gender"/>
-                             <field name="ref"/>
+                            <field name="ref"/>
+                            <field name="active" invisible="1"/>
                         </group>
                         </group>
                     </sheet>
