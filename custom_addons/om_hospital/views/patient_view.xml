@@ -19,6 +19,9 @@
                         <filter string="Gender" name="group_by_gender" domain="[]" context="{'group_by': 'gender'}"/>
                         <filter string="Age" name="group_by_age" domain="[]" context="{'group_by': 'age'}"/>
                     </group>
+                    <searchpanel>
+                        <field name="gender" select="multi" icon="fa-users" enable_counters="1"/>
+                    </searchpanel>
                 </search>
             </field>
         </record>
