@@ -13,7 +13,7 @@
                     <separator/>
                     <filter name="filter_female" string="Female" domain="[('gender','=','female')]"/>
                     <separator/>
-                    <filter name="filter_kids" string="Kids" domain="[('age', '&lt;=','5')]"/>    <!-- &lt;= equals <= -->
+<!--                    <filter name="filter_kids" string="Kids" domain="[('age', '&lt;=','5')]"/>    &lt;!&ndash; &lt;= equals <= &ndash;&gt;-->
                     <filter name="filter_archived" string="Archived" domain="[('active', '=', False)]"/>
                     <group expand="0" string="Group By">
                         <filter string="Gender" name="group_by_gender" domain="[]" context="{'group_by': 'gender'}"/>
@@ -52,6 +52,7 @@
                         <group>
                             <field name="name"/>
                             <field name="age"/>
+                            <field name="date_of_birth"/>
                         </group>
                             <group>
                                 <field name="gender"/>
