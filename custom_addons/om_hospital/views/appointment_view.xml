@@ -43,14 +43,10 @@
                         </group>
                         <notebook>
                             <page string="Prescription" name="prescription">
-                                <group>
-                                    <field name="gender" />
-                                </group>
+                                    <field name="prescription" placeholder="Enter your prescription" />
                             </page>
                             <page string="Pharmacy" name="pharmacy">
-                                <group>
-                                    <field name="booking_date"/>
-                                </group>
+
                             </page>
                         </notebook>
                     </sheet>

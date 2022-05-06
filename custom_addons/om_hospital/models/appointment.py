@@ -13,6 +13,7 @@ class HospitalAppointment(models.Model):
     booking_date = fields.Date(string="Booking Date", default=fields.Date.today)
     gender = fields.Selection(related='patient_id.gender')
     ref = fields.Char(string="Reference")
+    prescription = fields.Html(string='Prescription')
 
     @api.onchange('patient_id')
     def onchange_patient_id(self):
