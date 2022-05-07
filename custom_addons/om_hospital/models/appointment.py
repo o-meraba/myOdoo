@@ -25,6 +25,15 @@ class HospitalAppointment(models.Model):
         ('done', 'Done'),
         ('cancel', 'Cancel')],default='draft', string="Status", required=True)
 
+    def action_confirm(self):
+       print("Helloooo")
+
+    def action_test(self):
+        print("Test Button clicked")
+
+    def action_button(self):
+        print("Action button was clicked")
+
 
     @api.onchange('patient_id')
     def onchange_patient_id(self):

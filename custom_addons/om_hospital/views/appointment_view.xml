@@ -30,6 +30,9 @@
                <field name="arch" type="xml">
                 <form>
                     <header>
+                        <button name="action_confirm" id="action_confirm" string="Confirm" data-hotkey="v"
+                        class="btn-primary" type="object"/>
+
                          <field name="state" widget="statusbar" nolabel="1" options="{'clickable': '1', 'fold_field': 'fold'}"/>
                     </header>
                     <sheet>
@@ -47,6 +50,9 @@
                             <group>
                                   <field name="ref"/>
                                   <field name="appointment_time" />
+                                  <button name="action_test" string="Test Button" type="object" class="btn btn-primary"/> <!-- object button will execute a python func -->
+                                  <button name="%(action_hospital_patient)d" string="Action Button" type="action" class="btn btn-primary"/>
+                                <!-- action button will trigger an action  -->
                             </group>
                         </group>
                         <notebook>
