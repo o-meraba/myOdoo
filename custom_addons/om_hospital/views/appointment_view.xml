@@ -14,11 +14,17 @@
             <field name="name">hospital.appointment.tree</field>
             <field name="model">hospital.appointment</field>
                <field name="arch" type="xml">
-                <tree create="1" delete="0" sample="1" multi_edit="1">
+                <tree create="1" delete="0" sample="1" multi_edit="1"
+                      decoration-success="state == 'done'"
+                      decoration-danger="state =='cancel'">
                     <field name="patient_id" />
                     <field name="appointment_time" />
                     <field name="booking_date" />
-                    <field name="state" widget="badge" decoration-success="state == 'done'" decoration-warning="state == 'in_consultation'"  decoration-info="state == 'draft'" decoration-danger="state =='cancel'"/>
+                    <field name="state" widget="badge"
+                           decoration-success="state == 'done'"
+                           decoration-warning="state == 'in_consultation'"
+                           decoration-info="state == 'draft'"
+                           decoration-danger="state =='cancel'"/>
                 </tree>
             </field>
         </record>
