@@ -18,6 +18,7 @@
                     <field name="patient_id" />
                     <field name="appointment_time" />
                     <field name="booking_date" />
+                    <field name="state" widget="badge" decoration-success="state == 'done'" decoration-warning="state == 'in_consultation'"  decoration-info="state == 'draft'" decoration-danger="state =='cancel'"/>
                 </tree>
             </field>
         </record>
