@@ -50,8 +50,12 @@
                             <group>
                                   <field name="ref"/>
                                   <field name="appointment_time" />
-                                  <button name="action_test" string="Test Button" type="object" class="btn btn-primary"/> <!-- object button will execute a python func -->
-                                  <button name="%(action_hospital_patient)d" string="Action Button" type="action" class="btn btn-primary"/>
+                                  <button name="action_test" string="Test Button"
+                                          confirm="Are you sure to execute Python code?"
+                                          type="object" class="btn btn-primary"/> <!-- object button will execute a python func -->
+                                  <button name="%(action_hospital_patient)d" string="Action Button"
+                                          confirm="Are you sure to open the patient action?"
+                                          type="action" class="btn btn-primary"/>
                                 <!-- action button will trigger an action  -->
                             </group>
                         </group>
