@@ -18,8 +18,9 @@
                       decoration-success="state == 'done'"
                       decoration-danger="state =='cancel'">
                     <field name="patient_id" />
-                    <field name="appointment_time" />
-                    <field name="booking_date" />
+                    <field name="appointment_time" optional="hide" />
+                    <field name="gender" optional="hide"/>
+                    <field name="booking_date" optional="show" />
                     <field name="activity_ids" widget="list_activity"/>
                     <field name="state" widget="badge"
                            decoration-success="state == 'done'"
