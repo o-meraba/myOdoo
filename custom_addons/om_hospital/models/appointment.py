@@ -24,6 +24,7 @@ class HospitalAppointment(models.Model):
         ('in_consultation', 'In Consultation'),
         ('done', 'Done'),
         ('cancel', 'Cancel')],default='draft', string="Status", required=True)
+    doctor_id = fields.Many2one('res.users', string='Doctor')
 
     def action_confirm(self):
        print("Helloooo")
