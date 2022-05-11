@@ -55,7 +55,7 @@
                             <group>
                                 <field name="patient_id" />
                                 <field name="gender"/>
-                                <field name="booking_date" help="Date of booking"/>
+                                <field name="booking_date" default_focus="1" help="Date of booking"/>
                                 <field name="doctor_id" />
                             </group>
                             <group>
