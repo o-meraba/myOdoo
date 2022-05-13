@@ -40,10 +40,16 @@
                <field name="arch" type="xml">
                 <form>
                     <header>
-                        <button name="action_confirm" id="action_confirm" string="Confirm" data-hotkey="v"
+                        <button name="action_in_consultation" id="action_in_consultation" string="In Consultation" states="draft" data-hotkey="v"
                         class="btn-primary" type="object"/>
-
-                         <field name="state" widget="statusbar" nolabel="1" options="{'clickable': '1', 'fold_field': 'fold'}"/>
+                        <button name="action_done" id="action_done" string="Mark As Done" data-hotkey="v"
+                        class="btn-primary" type="object" states="in_consultation" />
+                        <button name="action_cancel" id="action_cancel" string="Cancel" data-hotkey="v"
+                        class="btn-primary" type="object" states="in_consultation,draft"/>
+                         <button name="action_draft" id="action_draft" string="Reset To Draft" data-hotkey="v"
+                        class="btn-primary" type="object" states="cancel"/>
+                        <!-- options="{'clickable': '1', 'fold_field': 'fold'}" -->
+                         <field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,in_consultation,done"/>
                     </header>
                     <sheet>
                         <div class="oe_title">

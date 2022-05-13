@@ -23,11 +23,24 @@ class HospitalAppointment(models.Model):
         ('draft', 'Draft'),
         ('in_consultation', 'In Consultation'),
         ('done', 'Done'),
-        ('cancel', 'Cancel')],default='draft', string="Status", required=True)
+        ('cancel', 'Cancel')],default='draft', string="Status", required=True, tracking=True)
     doctor_id = fields.Many2one('res.users', string='Doctor')
 
-    def action_confirm(self):
-       print("Helloooo")
+    def action_in_consultation(self):
+        for rec in self:
+            rec.state = 'in_consultation'
+
+    def action_done(self):
+        for rec in self:
+            rec.state = 'done'
+
+    def action_cancel(self):
+        for rec in self:
+            rec.state = 'cancel'
+
+    def action_draft(self):
+        for rec in self:
+            rec.state = 'draft'
 
     def action_test(self):
         print("Test Button clicked")
