@@ -86,7 +86,7 @@
                             </page>
                             <page string="Pharmacy" name="pharmacy">
                                 <field name="pharmacy_line_ids">
-                                    <tree>
+                                    <tree editable="top"> <!-- editable="bottom" -->
                                         <field name="product_id"/>
                                         <field name="price_unit" />
                                         <field name="qty" />
