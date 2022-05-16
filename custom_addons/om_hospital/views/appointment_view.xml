@@ -67,7 +67,7 @@
                             <group>
                                   <field name="ref"/>
                                   <field name="appointment_time" />
-                                  <field name="hide_sales_price" />
+                                  <field name="hide_sales_price" groups="base.group_no_one"/>
                                   <button name="action_test" string="Test Button"
                                           confirm="Are you sure to execute Python code?"
                                           help="A message will be printed in the log"
