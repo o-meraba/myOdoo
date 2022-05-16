@@ -67,6 +67,7 @@
                             <group>
                                   <field name="ref"/>
                                   <field name="appointment_time" />
+                                  <field name="hide_sales_price" />
                                   <button name="action_test" string="Test Button"
                                           confirm="Are you sure to execute Python code?"
                                           help="A message will be printed in the log"
@@ -88,13 +89,15 @@
                                 <field name="pharmacy_line_ids">
                                     <tree editable="top"> <!-- editable="bottom" -->
                                         <field name="product_id"/>
-                                        <field name="price_unit" />
+                                        <field name="price_unit"
+                                               attrs="{'column_invisible' : [('parent.hide_sales_price', '=', True)]}"/>
                                         <field name="qty" />
                                     </tree>
                                     <form>
                                         <group>
                                             <field name="product_id"/>
-                                            <field name="price_unit" />
+                                            <field name="price_unit"
+                                                   attrs="{'column_invisible' : [('parent.hide_sales_price', '=', True)]}" />
                                             <field name="qty" />
                                         </group>
                                     </form>
